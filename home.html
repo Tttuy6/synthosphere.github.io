@@ -66,10 +66,15 @@
         }
 
         @keyframes slideUp {
-            0% {transform: translateY(0);}
-
-            100% {transform: translateY(-300%);}
-
+          0% {
+            transform: translateY(0) translateX(0);
+          }
+          70% {
+            transform: translateY(-300%) translateX(0);
+          }
+          100% {
+            transform: translateY(-300%) translateX(5%);
+          }
         }
 
         .container {
