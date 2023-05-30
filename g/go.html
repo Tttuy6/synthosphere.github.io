@@ -90,7 +90,8 @@ body {
     <div class="box">
       
       <center>
-        <marquee direction="right" style="color: white;">DataSphere Games Hub</marquee>
+        <input type="text" id="search" placeholder="Search for games . . .">
+      <button onclick="search()">Search</button>
       </center>
 
 <br>
@@ -485,5 +486,16 @@ body {
         
     
    
+
+    <script>
+function search() {
+  var searchTerm = document.getElementById("search").value;
+  var container = document.getElementsByClassName("one")[0];
+  var text = container.innerText;
+  var searchRegex = new RegExp(searchTerm, "g");
+  var highlightedText = text.replace(searchRegex, "<mark>$&</mark>");
+  container.innerHTML = highlightedText; //replace only the text within the element with class "one"
+}
+    </script>
 </body>
 </html>
