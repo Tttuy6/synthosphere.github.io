@@ -49,26 +49,17 @@
         animation-iteration-count: infinite;
     }
 
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
     @keyframes slideToLeft {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) rotate(0deg);
+        
     }
     75% {
         transform: translateX(-175%);
     }
 
     100% {
-        transform: translateX(-110%);
+        transform: translateX(-110%) rotate(360deg);
     }
 
    
