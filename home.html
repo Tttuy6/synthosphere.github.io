@@ -43,6 +43,22 @@
     animation-fill-mode: forwards;
     }
 
+    .logo1 {
+        animation: spin 3s;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
     @keyframes slideToLeft {
     0% {
         transform: translateX(0);
@@ -153,7 +169,7 @@
     <center>
     <header>
         <a href="index.html">
-            <img class="logo" src="Media/logonew.gif" height="100" width="100" style="margin-left: auto; margin-right: auto;">
+            <img class="logo logo1" src="Media/logonew.gif" height="100" width="100" style="margin-left: auto; margin-right: auto;">
         </a>
             <h2>SynthoSphere</h2>
         
