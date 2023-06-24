@@ -111,16 +111,60 @@ body {
     .note {
       padding: 7px;
     }
+
+    .parallelogram1 {
+        width: 100px;
+        height: 60px;
+        transform: skew(20deg);
+        background: rgb(35, 16, 247);
+        animation: changeBg1 linear infinite;
+      }
+
+      .par {
+          width: 100px;
+          height: 60px;
+          transform: skew(-20deg);
+          background: rgb(35, 16, 247);
+          animation: changeBg2 linear infinite 10s;
+        }
+
+        @keyframes changeBg2 {
+          0% {
+            background-color: rgb(35, 16, 247);
+          }
+
+          50% {
+            background-color: black;
+          }
+
+          100% {
+            background-color: rgb(35, 16, 247);
+          }
+        }
+
+        .mini {
+          display: flex;
+        }
     </style>
 </head>
 <body>
-  <audio src="/Media/pac-man-intro-music.mp3" autoplay></audio>
+  <script src="/cloak.js"></script>
+
     <div class="box">
       
     
 
 <br>
       <div class="one">
+
+
+
+        <div class="mini">
+          <a href="javascript:openInNewTab(link + '/chat.html')">
+            <div class="parallelogram1">Chat</div>
+          </a>
+          <a href=""></a>
+        </div>
 
 
 
