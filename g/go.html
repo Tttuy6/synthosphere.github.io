@@ -44,7 +44,7 @@
   display: flex;
   justify-content: center;
   height: 100%;
-  width: 66vw;
+  width: 100vw;
   padding-left: 83px;
   margin-top: 0;
   margin-bottom: 0;
@@ -118,20 +118,20 @@ body {
         transform: skew(20deg);
         background: rgb(35, 16, 247);
         animation: changeBg1 linear infinite;
-
+        color: black;
       }
 
         @keyframes changeBg1{
           0% {
-            background-color: rgb(35, 16, 247);
-          }
-
-          50% {
             background-color: black;
           }
 
-          100% {
+          50% {
             background-color: rgb(35, 16, 247);
+          }
+
+          100% {
+            background-color: black;
           }
         }
 
@@ -141,19 +141,20 @@ body {
           transform: skew(-20deg);
           background: rgb(35, 16, 247);
           animation: changeBg2 linear infinite 10s;
+          color: black;
         }
 
-        @keyframes changeBg2 {
+        @keyframes changeBg2{
           0% {
-            background-color: rgb(35, 16, 247);
-          }
-
-          50% {
             background-color: black;
           }
 
-          100% {
+          50% {
             background-color: rgb(35, 16, 247);
+          }
+
+          100% {
+            background-color: black;
           }
         }
 
@@ -178,8 +179,8 @@ body {
           <a href="javascript:openInNewTab(link + '/chat.html')">
             <div class="parallelogram1">Chat</div>
           </a>
-          <a href="javascript:openInNewTab(link + 'uv')">
-            <div class="par">Unblocker Coming Soon!</div>
+          <a href="javascript:openInNewTab(link + '/uv')">
+            <div class="par">Unblocker coming soon!</div>
           </a>
         </div>
 
@@ -639,18 +640,6 @@ body {
         </script>
 
         
-    </div>
-      <div class="two">
-        <div class="notes">
-          <br>
-          <h3 id="notetitle">Note</h3>
-          <p id="note">Well, we sure are getting a lot of games!  I hope you are enjoying this page.  I just wanted to note that the games marked with SWF are working, but take a while to load.  If it says "page unresponsive", click wait.</p>
-            <br>
-            <br>
-            <br>
-        </div>
-      </div>
-    </div>
         
     
    
