@@ -9,7 +9,7 @@ function openInNewTab(url) {
 
   var icon = win.document.createElement('link')
   icon.rel = "shortcut icon"
-  icon.href = window.location.origin+"/icon.png"
+  icon.href = link + "/Media/logonew.gif"
   icon.type = "image/png"
   win.document.head.appendChild(icon)
   
