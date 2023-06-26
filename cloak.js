@@ -1,5 +1,9 @@
 document.cookie = 'cross-site-cookie2=noneCookie; SameSite=None; Secure';
 let link = "https://synthosphere.github.io"
+
+let audio2 = new Audio('/Media/boom.mp3')
+audio2.play()
+
 function openInNewTab(url) {
 
 
