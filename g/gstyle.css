@@ -131,7 +131,7 @@
             color: black;
             margin-left: 10px;
             margin-right: 10px;
-            transition: transform 2s linear;
+            transition: transform 1s linear;
           }
   
           .par:hover {
@@ -160,6 +160,11 @@
           .txt {
             transform: skew(20deg);
             color: white;
+            transition: transform 2s;
+          }
+
+          .txt:hover {
+            transform: skew(20);
           }
   
           a {
