@@ -3,8 +3,6 @@ let link = "https://synthosphere.github.io"
 
 function openInNewTab(url) {
   
-  let audio2 = new Audio('/Media/boom.mp3')
-  audio2.play()
 
   win = window.open();
   win.document.body.style.margin = '0';
