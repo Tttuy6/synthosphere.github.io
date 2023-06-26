@@ -131,11 +131,12 @@
             color: black;
             margin-left: 10px;
             margin-right: 10px;
-            transition: transform 2s ease-in-out linear;
+            transition: transform 2s linear;
           }
   
           .par:hover {
             transform: scale(1.5);
+            transform: skew(0);
           }
   
           @keyframes changeBg2{
