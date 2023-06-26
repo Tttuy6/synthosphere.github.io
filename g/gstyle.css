@@ -1,0 +1,165 @@
+.container {
+    background: rgb(255, 54, 54);
+    width: 250px;
+    height: 100px;
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    /* justify-content: space-around */ /* remove; doing nothing */
+  }
+  .two {
+    background-color: rgb(255, 54, 54);
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 33vw;
+    display: block;
+    visibility: visible;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+  }
+  .one {
+    background: rgb(0, 0, 0);
+    flex: 2 1 auto;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    padding-left: 83px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  body {
+    border:red;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .notes {
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    
+  }
+      .gamecard {
+        transition: transform 1.5s;
+        cursor: pointer;
+        border: 2px solid red;
+        border-radius: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 158px;
+        width: 102px;
+        animation-name: changeBg;
+        animation-direction: alternate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+     }
+  
+  
+     @keyframes changeBg {
+      0% {
+        background-color: red;
+      }
+  
+      50% {
+        background-color: black;
+      }
+  
+      100% {
+        background-color: red;
+      }
+     }
+  
+     .gamecard:hover {
+      transform: scale(1.25);
+     }
+  
+      .gamename {
+        color: white;
+      }
+      img, .gameimg {
+        transition: height 1s linear;
+      }
+  
+      .big {
+        display: flex;
+      }
+  
+      .note {
+        padding: 7px;
+      }
+  
+      .parallelogram1 {
+          width: 100px;
+          height: 60px;
+          transform: skew(20deg);
+          background: rgb(35, 16, 247);
+          animation: changeBg1 linear infinite;
+          color: black;
+        }
+  
+          @keyframes changeBg1{
+            0% {
+              background-color: black;
+            }
+  
+            50% {
+              background-color: rgb(35, 16, 247);
+            }
+  
+            100% {
+              background-color: black;
+            }
+          }
+  
+        .par {
+            width: 100px;
+            height: 60px;
+            transform: skew(-20deg);
+            background: rgb(35, 16, 247);
+            animation: changeBg2 linear infinite 10s;
+            color: black;
+            margin-left: 10px;
+            margin-right: 10px;
+            transition: transform 2s ease-in-out linear;
+          }
+  
+          .par:hover {
+            transform: scale(1.5);
+          }
+  
+          @keyframes changeBg2{
+            0% {
+              background-color: black;
+            }
+  
+            50% {
+              background-color: rgb(35, 16, 247);
+            }
+  
+            100% {
+              background-color: black;
+            }
+          }
+  
+          .mini {
+            display: flex;
+          }
+  
+          .txt {
+            transform: skew(20deg);
+          }
+  
+          a {
+            text-decoration: none;
+          }
