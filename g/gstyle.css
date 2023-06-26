@@ -175,4 +175,6 @@
           .title {
             font-family: 'Bebas Neue', sans-serif;
             color: white;
+            margin-left: auto;
+            margin-right: auto;
           }
