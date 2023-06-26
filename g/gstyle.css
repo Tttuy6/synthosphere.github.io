@@ -159,6 +159,7 @@
   
           .txt {
             transform: skew(20deg);
+            color: white;
           }
   
           a {
