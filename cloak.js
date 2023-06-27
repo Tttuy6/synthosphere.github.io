@@ -12,7 +12,7 @@ function openInNewTab(url) {
 
   var icon = win.document.createElement('link')
   icon.rel = "shortcut icon"
-  icon.href = link + "/Media/logonew.gif"
+  icon.href = link + "/Media/classroom.png"
   icon.type = "image/png"
   win.document.head.appendChild(icon)
   
@@ -23,7 +23,7 @@ function openInNewTab(url) {
   win.document.head.appendChild(arc)*/
 
   var title = win.document.createElement('title')
-  title.innerText = "Calculator"
+  title.innerText = "Classroom"
   win.document.head.appendChild(title)
 
   /*
