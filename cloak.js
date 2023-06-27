@@ -12,7 +12,7 @@ function openInNewTab(url) {
 
   var icon = win.document.createElement('link')
   icon.rel = "shortcut icon"
-  icon.href = link + "/Media/classroom.png"
+  icon.href = link + "/Media/Google_Classroom_Logo.png"
   icon.type = "image/png"
   win.document.head.appendChild(icon)
   
