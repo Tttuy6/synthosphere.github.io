@@ -128,7 +128,7 @@ body {
             }
           }
   
-        .par {
+          .par {
             width: 100px;
             height: 60px;
             transform: skew(-20deg);
@@ -139,7 +139,25 @@ body {
             margin-right: 10px;
             transition: transform 1s linear;
             border: 4px solid rgb(35, 16, 247);
-          }
+          }  
+
+          .par2 {
+              width: 100%;
+              height: 60px;
+              transform: skew(-20deg);
+              background: rgb(35, 16, 247);
+              animation: changeBg2 linear infinite 10s;
+              color: black;
+              margin-left: 10px;
+              margin-right: 10px;
+              transition: transform 1s linear;
+              border: 4px solid rgb(35, 16, 247);
+            }
+
+            .par2:hover {
+              transform: scale(1.5);
+              transform: skew(0);
+            }
   
           .par:hover {
             transform: scale(1.5);
