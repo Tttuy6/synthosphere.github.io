@@ -1,6 +1,8 @@
 let rPressed = false;
 let count = 0;
 
+inputs()
+
 function inputs(){
     if(rPressed) {
       count = count + 1;
