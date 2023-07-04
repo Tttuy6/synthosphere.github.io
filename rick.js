@@ -13,6 +13,7 @@ function setCount(newCount) {
 function keyDown(event) {
   if (event.keyCode == 82) {
     setCount(count + 1);
+    console.log("R Pressed.");
 
     setTimeout(() => {
       setCount(0);
