@@ -3,7 +3,7 @@ let link = "https://synthosphere.github.io"
 
 function openInNewTab(url) {
   
-  let audio2 = new Audio('/Media/boom.mp3')
+  let audio2 = new Audio('/Media/vboom.mp3')
   audio2.play()
 
   win = window.open();
