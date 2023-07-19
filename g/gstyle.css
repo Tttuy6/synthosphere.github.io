@@ -2,6 +2,16 @@ body {
   background-color: black;
 }
 
+.big {
+  animation: intro 2s linear;
+}
+
+@keyframes intro {
+  0% {transform: scale(0);}
+  75% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
 .container {
     background: rgb(255, 54, 54);
     width: 250px;
