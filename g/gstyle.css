@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-.big {
+.big, .gamecard {
   animation: intro 2s linear;
 }
 
