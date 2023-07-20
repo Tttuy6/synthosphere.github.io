@@ -5,10 +5,11 @@ body {
 .big, .gamecard {
   animation: size 4s linear;
 }
-
+/*
 .animate {
   animation: intro 2s linear;
 }
+*/
 
 @keyframes intro {
   0% {transform: scale(0);}
