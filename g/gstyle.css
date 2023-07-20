@@ -2,9 +2,13 @@ body {
   background-color: black;
 }
 
-.big, .gamecard {
+.gamecard {
   animation: intro 2s linear;
   animation: size 4s linear;
+}
+
+.animate {
+  animation: intro 2s linear;
 }
 
 @keyframes intro {
