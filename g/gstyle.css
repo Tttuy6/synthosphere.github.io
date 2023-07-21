@@ -1,10 +1,11 @@
 body {
   background-color: black;
 }
-
+/*
 .big, .gamecard {
   animation: size 4s linear;
 }
+*/
 /*
 .animate {
   animation: intro 2s linear;
@@ -83,7 +84,6 @@ body {
         height: 158px;
         width: 102px;
         animation: changeBg 10s infinite alternate ease;
-        animation: size 4s linear;
      }
   
   
