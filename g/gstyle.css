@@ -82,11 +82,8 @@ body {
         margin-right: 10px;
         height: 158px;
         width: 102px;
-        animation-name: changeBg;
-        animation-direction: alternate;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease;
+        animation: changeBg 10s infinite alternate ease;
+        animation: size 4s linear;
      }
   
   
