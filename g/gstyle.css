@@ -1,6 +1,20 @@
 body {
   background-color: black;
 }
+
+#myInput {
+  width: 456px;
+  height: 90px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
 /*
 .big, .gamecard {
   animation: size 4s linear;
@@ -30,6 +44,7 @@ body {
     width: 250px;
     height: 100px;
   }
+
   .box {
     display: flex;
     align-items: center;
@@ -118,6 +133,9 @@ body {
         display: flex;
         text-align: center;
         justify-content: center;
+        margin-right: 30vw;
+        margin-left: 30vw;
+        max-width: 40vw;
       }
   
       .note {
