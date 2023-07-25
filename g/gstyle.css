@@ -36,9 +36,6 @@ body {
 }
 
 
-* {
-  box-sizing: border-box;
-}
 /*
 .big, .gamecard {
   animation: size 4s linear;
