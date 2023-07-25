@@ -1,44 +1,6 @@
 body {
   background-color: black;
 }
-
-#myInput {
-  width: 456px;
-  height: 82px;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ff0000;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  background-color: rgb(93, 93, 92);
-  transition: width 2s linear;
-  animation: bgChange 12s linear infinite;
-}
-
-#myInput:hover {
-  width: 684px;
-  left: 0;
-  margin: 10px;
-}
-
-@keyframes bgChange {
-  0% {
-    background-color: rgb(93, 93, 92);
-  }
-
-  50% {
-    background-color: rgb(13, 107, 13);
-  }
-
-  100% {
-    background-color: rgb(93, 93, 92);
-  }
-}
-
-
-* {
-  box-sizing: border-box;
-}
 /*
 .big, .gamecard {
   animation: size 4s linear;
@@ -156,6 +118,8 @@ body {
         display: flex;
         text-align: center;
         justify-content: center;
+        margin-right: 30vw;
+        margin-left: 30vw;
       }
   
       .note {
