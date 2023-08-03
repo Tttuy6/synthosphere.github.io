@@ -112,7 +112,7 @@ body {
     
   }
       .gamecard {
-        transition: transform 1.5s;
+        transition: transform 1s;
         cursor: pointer;
         border: 2px solid red;
         border-radius: 5px;
@@ -139,7 +139,7 @@ body {
      }
   
      .gamecard:hover {
-      transform: scale(1.25) translate(-10px, -10px);
+      transform: scale(1.2) translate(-10px, -10px);
      }
   
       .gamename {
