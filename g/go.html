@@ -1,301 +1,593 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Password Protected Page</title>
-    <style>
-        html, body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #dialogText {
-            color: white;
-            background-color: #333333;
-        }
-        
-        #dialogWrap {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: table;
-            background-color: #3e3e3e;
-        }
-        
-        #dialogWrapCell {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-        
-        #mainDialog {
-            max-width: 400px;
-            margin: 5px;
-            border: solid #AAAAAA 1px;
-            border-radius: 10px;
-            box-shadow: 3px 3px 5px 3px #AAAAAA;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #FFFFFF;
-            overflow: hidden;
-            text-align: left;
-        }
-        #mainDialog > * {
-            padding: 10px 30px;
-        }
-        #passArea {
-            padding: 20px 30px;
-            background-color: white;
-        }
-        #passArea > * {
-            margin: 5px auto;
-        }
-        #pass {
-            width: 100%;
-            height: 40px;
-            font-size: 30px;
-        }
-        
-        #messageWrapper {
-            float: left;
-            vertical-align: middle;
-            line-height: 30px;
-        }
-        
-        .notifyText {
-            display: none;
-        }
-        
-        #invalidPass {
-            color: red;
-        }
-        
-        #success {
-            color: green;
-        }
-        
-        #submitPass {
-            font-size: 20px;
-            border-radius: 5px;
-            background-color: #E7E7E7;
-            border: solid gray 1px;
-            float: right;
-            cursor: pointer;
-        }
-        #contentFrame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        #attribution {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 0.8em;
-        }
-        #attribution, #attribution a {
-            color: #999;
-        }
-        .error {
-            display: none;
-            color: red;
-        }
-    </style>
-  </head>
-  <body>
-    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
-    <div id="dialogWrap">
-        <div id="dialogWrapCell">
-            <div id="mainDialog">
-                <div id="dialogText">The password is the 2-digit funny number.</div>
-                <div id="passArea">
-                    <p id="passwordPrompt">Password</p>
-                    <input id="pass" type="password" name="pass" autofocus>
-                    <div>
-                        <span id="messageWrapper">
-                            <span id="invalidPass" class="error">Sorry, please try again.</span>
-                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
-                            <span id="success" class="notifyText">Password correct!  Access Granted!</span>
-                            &nbsp;
-                        </span>
-                        <button id="submitPass" type="button">Submit</button>
-                        <div style="clear: both;"></div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY IS ENABLED</title>
+    <link rel="stylesheet" href="gstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script src="/cloak.js"></script>
+  <script src="search.js"></script>
+  <script>
+    var choir = new Audio(/Media/choir.mp3)
+    choir.play()
+  </script>
+
+      
+    
+
+<br>
+
+
+
+
+
+        <br>
+        <br>
+
+
+
+
+        <center>
+          <br>
+          <br>
+          <div class="big">
+            <center>
+            <h1 class="title">Welcome to the real SynthoSphere!</h1>
+          </center>
+
+          </div>
+          <br>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games..." title="Type in a name">
+          <div class="big">
+            <a href="javascript:openInNewTab(link + '/declaration.txt')">
+              <div class="par2">
+                <div class="gamename">
+                  <p>Declaration of Innocence</p>
                 </div>
-                <div id="securecontext" class="error">
-                    <p>
-                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
-                    </p>
+              </div>
+            </a>
+          </div>
+          <br>
+          <div class="big">
+            <a href="javascript:openInNewTab(link + '/chat.html')">
+              <div class="par">
+                <div class="gamename">
+                  <p>Chat</p>
                 </div>
-                <div id="nocrypto" class="error">
-                    <p>
-                        Your web browser appears to be outdated. Please visit this page using a modern browser.
-                    </p>
-                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="par">
+                <p class="gamename">Coming Soon</p>
+              </div>
+            </a>
+            <a href="javascript:openInNewTab(link + '/bing.html')">
+              <div class="par">
+                <p class="gamename">Music</p>
+              </div>
+            </a>
+            <a href="javascript:openInNewTab(link + '/media.html')">
+              <div class="par">
+                <p class="gamename">Mediaology</p>
+              </div>
+            </a>
+            <a href="javascript:openInNewTab(link + '/forms.html')">
+              <div class="par">
+                <p class="gamename">Forms</p>
+              </div>
+            </a>
+            <a href="javascript:openInNewTab(link + '/gpt.html')">
+              <div class="par">
+                <p class="gamename">ChatGPT</p>
+              </div>
+            </a>
+          </div>
+
+          <br>
+          <br>
+          <br>
+
+          <div class="big">
+          <a href="javascript:openInNewTab(link + '/g/waltuh.html')">
+            <div class="gamecard animate">
+              <div class="gameimg">
+                <img src="gmedia/walter.jpg" style="height: 100px; width: 100px;">
+              </div>
+              <div class="gamename">
+                <p>Walter White Run</p>
+              </div>
             </div>
+  
+          </a>
+          <a href="javascript:openInNewTab(link + '/g/slope.html')">
+            <div class="gamecard animate">
+              <div class="gameimg">
+                <img src="gmedia/slope.png" style="height: 100px; width: 100px;">
+              </div>
+              <div class="gamename">
+                <p>Slope</p>
+              </div>
+            </div>
+  
+          </a>
+          <a href="javascript:openInNewTab(link + '/g/pacman.html')">
+            <div class="gamecard animate">
+              <div class="gameimg">
+                <img src="gmedia/pacman.png" style="height: 100px; width: 100px;">
+              </div>
+              <div class="gamename">
+                <p>Pac-Man (SWF)</p>
+              </div>
+            </div>
+  
+          </a>
+          <a href="javascript:openInNewTab(link + '/g/monkey.html')">
+            <div class="gamecard animate">
+              <div class="gameimg">
+                <img src="gmedia/monkey.png" style="height: 100px; width: 100px;">
+              </div>
+              <div class="gamename">
+                <p>Monkey Mart</p>
+              </div>
+            </div>
+  
+          </a>
+
+          <a href="javascript:openInNewTab(link + '/g/rocket.html')">
+            <div class="gamecard animate">
+              <div class="gameimg">
+                <img src="gmedia/rocketpult.jpg" style="height: 100px; width: 100px;">
+              </div>
+              <div class="gamename">
+                <p>Rocketpult</p>
+              </div>
+            </div>
+          </a>
+        
+
+        <br>
+        
+
+        <a href="javascript:openInNewTab(link + '/g/tomb.html')">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/tomb.png" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Tomb of the Mask</p>
+            </div>
+          </div>
+        </a>
         </div>
-    </div>
-    <!--
-    <div id="attribution">
-        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
-    </div>
--->
-    <script>
-    (function() {
 
-        var pl = "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";
-        
-        var submitPass = document.getElementById('submitPass');
-        var passEl = document.getElementById('pass');
-        var invalidPassEl = document.getElementById('invalidPass');
-        var trycatcherror = document.getElementById('trycatcherror');
-        var successEl = document.getElementById('success');
-        var contentFrame = document.getElementById('contentFrame');
-        
-        // Sanity checks
+<br>
 
-        if (pl === "") {
-            submitPass.disabled = true;
-            passEl.disabled = true;
-            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
-            return;
-        }
+        <div class="big">
+          
+      <a href="javascript:openInNewTab(link + '/g/bear.html')">
+        <div class="gamecard animate">
+          <div class="gameimg">
+            <img src="gmedia/bear.jpg" style="height: 100px; width: 100px;">
+          </div>
+          <div class="gamename">
+            <p>Scuba bear</p>
+          </div>
+        </div>
+      </a>
 
-        if (!isSecureContext) {
-            document.querySelector("#passArea").style.display = "none";
-            document.querySelector("#securecontext").style.display = "block";
-            return;
-        }
+      <a href="javascript:openInNewTab(link + '/g/tracks.html')">
+        <div class="gamecard animate">
+          <div class="gameimg">
+            <img src="gmedia/moster.jpeg" style="height: 100px; width: 100px;">
+          </div>
+          <div class="gamename">
+            <p>Monster Tracks</p>
+          </div>
+        </div>
+      </a>
 
-        if (!crypto.subtle) {
-            document.querySelector("#passArea").style.display = "none";
-            document.querySelector("#nocrypto").style.display = "block";
-            return;
-        }
-        
-        function str2ab(str) {
-            var ustr = atob(str);
-            var buf = new ArrayBuffer(ustr.length);
-            var bufView = new Uint8Array(buf);
-            for (var i=0, strLen=ustr.length; i < strLen; i++) {
-                bufView[i] = ustr.charCodeAt(i);
-            }
-            return bufView;
-        }
+      <a href="javascript:openInNewTab(link + '/g/subway.html')">
+        <div class="gamecard animate">
+          <div class="gameimg">
+            <img src="gmedia/subwaysurfers-1677630205274.jpg" style="height: 100px; width: 100px;">
+          </div>
+          <div class="gamename">
+            <p>Subway Surfers</p>
+          </div>
+        </div>
+      </a>
 
-        async function deriveKey(salt, password) {
-            const encoder = new TextEncoder()
-            const baseKey = await crypto.subtle.importKey(
-                'raw',
-                encoder.encode(password),
-                'PBKDF2',
-                false,
-                ['deriveKey'],
-            )
-            return await crypto.subtle.deriveKey(
-                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
-                baseKey,
-                { name: 'AES-GCM', length: 256 },
-                true,
-                ['decrypt'],
-            )
-        }
-        
-        async function doSubmit(evt) {
-            submitPass.disabled = true;
-            passEl.disabled = true;
+      <a href="javascript:openInNewTab(link + '/g/over.html')">
+        <div class="gamecard animate">
+          <div class="gameimg">
+            <img src="gmedia/over.png" style="height: 100px; width: 100px;">
+          </div>
+          <div class="gamename">
+            <p>Getting Over It</p>
+          </div>
+        </div>
+      </a>
 
-            let iv, ciphertext, key;
+      <a href="javascript:openInNewTab(link + '/g/jump.html')">
+        <div class="gamecard animate">
+          <div class="gameimg">
+            <img src="gmedia/jump.png" style="height: 100px; width: 100px;">
+          </div>
+          <div class="gamename">
+            <p>Parkour Game</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="javascript:openInNewTab(link + '/g/dino.html')">
+        <div class="gamecard animate">
+          <div class="gameimg">
+            <img src="gmedia/dino.jpg" style="height: 100px; width: 100px;">
+          </div>
+          <div class="gamename">
+            <p>Chrome Dino Game</p>
+          </div>
+        </div>
+      </a>
+
+      </div>
+
+      <br>
+
+      <div class="big">
+
+        <a href="javascript:openInNewTab(link + '/g/piano.html')">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/piano.png" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Piano Tiles</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/wyb.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/wyb.png" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Whack Your Boss (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/wyx.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/wyx.jpeg" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Whack Your Ex (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/cubefield.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/cube.jpeg" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Cubefield (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/sniper.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/tactical_assassin_by_michelchokurei_df7epsu-350t.jpg" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Tactical Assassin (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/hardest.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/worlds.jpg" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Worlds Hardest Game (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <br>
+
+      <div class="big">
+
+        <a href="javascript:openInNewTab(link + '/ruffle/pingpong.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/ping.avif" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Ping Pong (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/tetris.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/tetris.png" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Tetris (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/unfair.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/mario.jpg" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Unfair Mario (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/quiz.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/quiz.avif" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>The Impossible Quiz (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="javascript:openInNewTab(link + '/ruffle/tank.html')" onclick="alert()">
+          <div class="gamecard animate">
+            <div class="gameimg">
+              <img src="gmedia/tank.jpeg" style="height: 100px; width: 100px;">
+            </div>
+            <div class="gamename">
+              <p>Indestructo Tank (SWF)</p>
+            </div>
+          </div>
+        </a>
+
+          <a href="javascript:openInNewTab(link + '/ruffle/monkey.html')" onclick="alert()">
+            <div class="gamecard animate">
+              <div class="gameimg">
+                <img src="gmedia/spankthemonkey..gif" style="height: 100px; width: 100px;">
+              </div>
+              <div class="gamename">
+                <p>Spank the Monkey (SWF)</p>
+              </div>
+            </div>
+          </a>
+          
+          </div>
+
+          <br>
+
+          <div class="big">
+
+            <a href="javascript:openInNewTab(link + '/ruffle/meat.html')" onclick="alert()">
+              <div class="gamecard animate">
+                <div class="gameimg">
+                  <img src="gmedia/meat.jpg" style="height: 100px; width: 100px;">
+                </div>
+                <div class="gamename">
+                  <p>Super Meat Boy (SWF)</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="javascript:openInNewTab(link + '/ruffle/snake.html')" onclick="alert()">
+              <div class="gamecard animate">
+                <div class="gameimg">
+                  <img src="gmedia/snake.png" style="height: 100px; width: 100px;">
+                </div>
+                <div class="gamename">
+                  <p>Snake (SWF)</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="javascript:openInNewTab(link + '/ruffle/sonic.html')" onclick="alert()">
+              <div class="gamecard animate">
+                <div class="gameimg">
+                  <img src="gmedia/sonic.avif" style="height: 100px; width: 100px;">
+                </div>
+                <div class="gamename">
+                  <p>Sonic Smash (SWF)</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="javascript:openInNewTab(link + '/ruffle/n.html')" onclick="alert()">
+              <div class="gamecard animate">
+                <div class="gameimg">
+                  <img src="gmedia/ngame.png" style="height: 100px; width: 100px;">
+                </div>
+                <div class="gamename">
+                  <p>The N Game (SWF)</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="javascript:openInNewTab(link + '/ruffle/motherload.html')" onclick="alert()">
+              <div class="gamecard animate">
+                <div class="gameimg">
+                  <img src="gmedia/motherload.png" style="height: 100px; width: 100px;">
+                </div>
+                <div class="gamename">
+                  <p>Motherload (SWF)</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="javascript:openInNewTab(link + '/ruffle/alien.html')" onclick="alert()">
+              <div class="gamecard animate">
+                <div class="gameimg">
+                  <img src="gmedia/Alien-Hominid-Invasion-GX.jpg" style="height: 100px; width: 100px;">
+                </div>
+                <div class="gamename">
+                  <p>Alien Hominid (SWF)</p>
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+          <br>
+
+          <div class="big">
+
+              <a href="javascript:openInNewTab(link + '/g/2048.html')" onclick="alert()">
+                <div class="gamecard animate">
+                  <div class="gameimg">
+                    <img src="gmedia/2048_logo.svg.png" style="height: 100px; width: 100px;">
+                  </div>
+                  <div class="gamename">
+                    <p>2048</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:openInNewTab(link + '/g/vex7.html')" onclick="alert()">
+                <div class="gamecard animate">
+                  <div class="gameimg">
+                    <img src="gmedia/vex.jpg" style="height: 100px; width: 100px;">
+                  </div>
+                  <div class="gamename">
+                    <p>Vex 7</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:openInNewTab(link + '/g/deezballz.html')" onclick="alert()">
+                <div class="gamecard animate">
+                  <div class="gameimg">
+                    <img src="gmedia/99BallsTeaser.jpg" style="height: 100px; width: 100px;">
+                  </div>
+                  <div class="gamename">
+                    <p>99 Ballz</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:openInNewTab(link + '/g/doge1.html')" onclick="alert()">
+                <div class="gamecard animate">
+                  <div class="gameimg">
+                    <img src="gmedia/dogeminer.png" style="height: 100px; width: 100px;">
+                  </div>
+                  <div class="gamename">
+                    <p>DogeMiner</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:openInNewTab(link + '/g/doge2.html')" onclick="alert()">
+                <div class="gamecard animate">
+                  <div class="gameimg">
+                    <img src="gmedia/doge-miner-2.png" style="height: 100px; width: 100px;">
+                  </div>
+                  <div class="gamename">
+                    <p>DogeMiner 2</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:openInNewTab(link + '/g/bitlife.html')" onclick="alert()">
+                <div class="gamecard animate">
+                  <div class="gameimg">
+                    <img src="gmedia/unnamed.png" style="height: 100px; width: 100px;">
+                  </div>
+                  <div class="gamename">
+                    <p>BitLife</p>
+                  </div>
+                </div>
+              </a>
+
+              </div>
+
+              <br>
+
+              
+              <div class="big">
+
+
+                <a href="javascript:openInNewTab(link + '/g/rl.html')">
+                  <div class="gamecard animate">
+                    <div class="gameimg">
+                      <img src="gmedia/rl.jpg" alt="rl" style="height: 100px; width: 100px;">
+                    </div>
+                    <div class="gamename">
+                      <p>Rocket League</p>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="javascript:openInNewTab(link + '/g/flashbang.html')">
+                  <div class="gamecard animate">
+                    <div class="gameimg">
+                      <img src="gmedia/burn.gif" alt="Light Mode" style="height: 100px; width: 100px;">
+                    </div>
+                    <div class="gamename">
+                      <p>Light Mode Simulator</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+          
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    
+        </center>
+
+        <script>
+          function alert() {
             
-            try {
-                var unencodedPl = str2ab(pl);
+          }
+        </script>
 
-                const salt = unencodedPl.slice(0, 32)
-                iv = unencodedPl.slice(32, 32 + 16)
-                ciphertext = unencodedPl.slice(32 + 16)
-
-                key = await deriveKey(salt, passEl.value);
-            } catch (e) {
-                trycatcherror.style.display = "inline";
-                console.error(e);
-                return;
-            }
-
-            try {
-                const decryptedArray = new Uint8Array(
-                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
-                );
-
-                let decrypted = new TextDecoder().decode(decryptedArray);
-
-                if (decrypted === "") throw "No data returned";
-
-                const basestr = '<base href="." target="_top">';
-                const anchorfixstr = `
-                    <script>
-                        Array.from(document.links).forEach((anchor) => {
-                            const href = anchor.getAttribute("href");
-                            if (href.startsWith("#")) {
-                                anchor.addEventListener("click", function(e) {
-                                    e.preventDefault();
-                                    const targetId = this.getAttribute("href").substring(1);
-                                    const targetEl = document.getElementById(targetId);
-                                    targetEl.scrollIntoView();
-                                });
-                            }
-                        });
-                    <\/script>
-                `;
-                
-                // Set default iframe link targets to _top so all links break out of the iframe
-                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
-                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
-                else decrypted = basestr + decrypted;
-
-                // Fix fragment links
-                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
-                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
-                else decrypted = decrypted + anchorfixstr;
-                
-                contentFrame.srcdoc = decrypted;
-                
-                successEl.style.display = "inline";
-                setTimeout(function() {
-                    dialogWrap.style.display = "none";
-                }, 1000);
-            } catch (e) {
-                invalidPassEl.style.display = "inline";
-                passEl.value = "";
-                submitPass.disabled = false;
-                passEl.disabled = false;
-                console.error(e);
-                return;
-            }
-        }
         
-        submitPass.onclick = doSubmit;
-        passEl.onkeypress = function(e){
-            if (!e) e = window.event;
-            var keyCode = e.keyCode || e.which;
-            invalidPassEl.style.display = "none";
-            if (keyCode == '13'){
-              // Enter pressed
-              doSubmit();
-              return false;
-            }
-        }
-    })();
+        
+    
+   
+
+    <script>
+function search() {
+  var searchTerm = document.getElementById("search").value;
+  var container = document.getElementsByClassName("one")[0];
+  var text = container.innerText;
+  var searchRegex = new RegExp(searchTerm, "g");
+  var highlightedText = text.replace(searchRegex, "<mark>$&</mark>");
+  container.innerHTML = highlightedText; //replace only the text within the element with class "one"
+}
     </script>
-  </body>
+</body>
 </html>
