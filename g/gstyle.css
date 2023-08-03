@@ -139,8 +139,7 @@ body {
      }
   
      .gamecard:hover {
-      transform: scale(1.25);
-      left: 10;
+      transform: scale(1.25) translate(-10px, -10px);
      }
   
       .gamename {
