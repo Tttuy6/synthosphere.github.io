@@ -191,8 +191,6 @@
     <script>
         function password() {
 
-            var choir = new Audio(/Media/choir.mp3);
-            choir.play()
             
               var password;
               var pass1 = "69";
@@ -202,6 +200,10 @@
               var pass5 = "dsp";
           
               password = prompt('Verification:  Please enter the funny number.', 'Type password here.');
+
+
+                var choir = new Audio(/Media/choir.mp3);
+                choir.play()
           
               if (password == pass1) {
                 create(); // Call create() function if password is correct
