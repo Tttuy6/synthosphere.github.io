@@ -155,6 +155,7 @@ body {
         justify-content: center;
         margin-right: 30vw;
         margin-left: 30vw;
+        flex-wrap: wrap;
       }
   
       .note {
