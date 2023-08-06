@@ -26,6 +26,12 @@ function beginClearingScreen() {
   button.style.display = 'none';
   var br = document.querySelector('br');
   br.style.display = 'none';
+  var body = document.querySelector('body');
+  body.style.backgroundColor = 'black';
+  var h1 = document.querySelector('h1');
+  var p = document.querySelector('p');
+  h1.style.color = 'white';
+  p.style.color = 'white';
 }
 
 // Attach the animate() function to the click event of the button
