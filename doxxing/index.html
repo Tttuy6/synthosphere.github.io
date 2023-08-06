@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doxxing Tool</title>
-    <style>
-      body, html {
-        height: 100%;
-        width: 100%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Me Doxx You</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .magic {
+      height: 90%;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      border-style: dotted;
+      border-color: purple;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      width: 400px;
+      margin: auto;
+      border-color: black;
+      border-style: solid;
+      margin-top: 20px;
+    }
+
+    .prog {
+      height: 30px;
+      background-color: black;
+    }
+
+    .animation {
+      animation-name: bar;
+      animation-duration: 4s;
+    }
+
+    @keyframes bar {
+      from {
+        width: 0%;
       }
 
-      body {
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+      to {
+        width: 100%
       }
-
-      .magic {
-        height: 90%;
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .wrapper {
-        width: 400px;
-        height: 50px;
-        border: black;
-      }
-
-      .prog {
-        color: red;
-        background-color: green;
-        width: 100%;
-        border-style: dotted;
-      }
-
-      @keyframes bar {
-        from {width: 0%;}
-        to {width: 100%}
-      }
-    </style>
+    }
+  </style>
 </head>
-<body>
-    <h1>I can doxx you with this webpage.</h1>
-    <p>Note - No data is saved, and this will not work if you are using a VPN.  That means most school computers.</p>
 
-  <div class="magic">
+<body>
+  <h1>I know your location!</h1>
+  <p>Note - This won't work on VPNs, which includes most school computers.</p>
+
+  <button>Animate</button>
+
+  
+  
+    <div class="wrapper">
       <div class="prog"></div>
+    </div>
+  <br>
+  <div class="magic">
+    <iframe src="frame.html" class="iframe" style="visibility: hidden;" height="100%" width="100%"></iframe>
   </div>
+  <script src="script.js"></script>
 </body>
+
 </html>

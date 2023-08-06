@@ -1,21 +1,33 @@
-var animationCount = 0;
-var isAnimating = false;
+function animate() {
+  // Find all elements with the class "prog"
+  const progElements = document.querySelectorAll(".prog");
 
-function animateElement() {
-  if (isAnimating) {
-    return;
+  // Add the class "animation" to each element
+  for (const progElement of progElements) {
+    progElement.classList.add("animation");
   }
 
-  let bang = new Audio('/Media/boom.mp3')
-  bang.play()
-
-  isAnimating = true;
-  document.querySelector(".element").classList.add("animation");
-
+  // setTimeout() will run the following code after 4 seconds
   setTimeout(() => {
-    isAnimating = false;
-    document.querySelector(".element").classList.remove("animation");
+    // Remove the class "animation" from each element
+    for (const progElement of progElements) {
+      progElement.classList.remove("animation");
+    }
+    beginClearingScreen();
   }, 4000);
 }
 
-document.querySelector(".button").addEventListener("click", animateElement);
+function beginClearingScreen() {
+  var wrapper = document.querySelector('.wrapper');
+  wrapper.style.display = 'none';
+  var iframe = document.querySelector("iframe");
+  iframe.style.visibility = 'visible';
+  var button = document.querySelector('button');
+  button.style.display = 'none';
+  var br = document.querySelector('br');
+  br.style.display = 'none';
+}
+
+// Attach the animate() function to the click event of the button
+const button = document.querySelector("button");
+button.addEventListener("click", animate);
