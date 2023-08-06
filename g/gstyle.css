@@ -116,8 +116,8 @@ body {
         cursor: pointer;
         border: 2px solid red;
         border-radius: 5px;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
         height: 158px;
         width: 102px;
         animation: changeBg 10s infinite alternate ease;
@@ -155,7 +155,6 @@ body {
         justify-content: center;
         margin-right: 30vw;
         margin-left: 30vw;
-        flex-wrap: wrap;
       }
   
       .note {
