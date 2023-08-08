@@ -27,6 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   
     function openTab() {
-    window.location.replace('https://stackoverflow.com/');
+    window.open('http://classroom.google.com','_blank');window.setTimeout(function(){this.close();},10)
     }
   });
