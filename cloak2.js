@@ -1,5 +1,5 @@
 document.cookie = 'cross-site-cookie2=noneCookie; SameSite=None; Secure';
-let link = "https://synthosphere.github.io"
+let link = "window.location.origin"
 
 function openInNewTab(url) {
   
