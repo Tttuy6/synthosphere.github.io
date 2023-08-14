@@ -117,8 +117,9 @@ body {
         border-radius: 5px;
         margin-left: 10px;
         margin-right: 10px;
-        height: 158px;
-        width: 102px;
+        margin-top: 20px;
+        height: 180px;
+        width: 120px;
         animation: changeBg 10s infinite alternate ease;
      }
   
@@ -152,6 +153,16 @@ body {
         display: flex;
         text-align: center;
         justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .gameWrap {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 20vw;
+        margin-right: 20vw;
       }
   
       .note {
