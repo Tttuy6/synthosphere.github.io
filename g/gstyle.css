@@ -121,6 +121,40 @@ body {
         height: 180px;
         width: 120px;
         animation: changeBg 10s infinite alternate ease;
+        animation: width 32 linear forwards;
+     }
+
+     .notWorking {
+      transition: transform 1s;
+      cursor: pointer;
+      border: 2px solid red;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 20px;
+      height: 180px;
+      width: 120px;
+      animation: changeBgForNotWorking 10s infinite alternate ease;
+      animation: width 32 linear forwards;
+     }
+
+     @keyframes changeBgForNotWorking {
+      0% {
+        background-color: red;
+      }
+  
+      50% {
+        background-color: black;
+      }
+  
+      100% {
+        background-color: blue;
+      }
+     }
+
+     @keyframes width {
+      from {width: 0px;}
+      to {width: 120px;}
      }
   
   
