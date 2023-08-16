@@ -138,7 +138,7 @@ body {
 
      @keyframes changeBgForNotWorking {
       0% {
-        background-color: red;
+        background-color: blue;
       }
   
       50% {
