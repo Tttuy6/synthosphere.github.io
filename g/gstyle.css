@@ -149,11 +149,6 @@ body {
         background-color: blue;
       }
      }
-
-     @keyframes width {
-      from {width: 0px;}
-      to {width: 120px;}
-     }
   
   
      @keyframes changeBg {
