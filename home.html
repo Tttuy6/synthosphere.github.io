@@ -66,14 +66,35 @@
         }
 
         .container {
-          position: relative;
-         width: 50%;
+          width: 30%;
+          margin-top: 10%;
         }
+
+
+
+        .holder {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          text-align: center;
+          margin: 0;
+        }
+      
         .image {
-         display: block;
-         height: auto;
-         border-bottom: dashed red;
+          display: block;
+          height: 24vh;
+          width: 28vw;
+          border: dotted green;
+          transition: border 3s;
+          margin-left: 5px;
+          margin-right: 5px;
 }
+
+      .image:hover {
+        border: dashed red;
+      }
 
 .darkmode {
     background-image: url(illusion.gif)
@@ -91,10 +112,6 @@
   transition: .5s ease;
 }
 
-.container:hover .overlay {
-  width: 100%;
-  left: 0;
-}
 
 .text {
   color: white;
@@ -190,7 +207,6 @@
 
     <h3><span>-</span></h3>
     <script>
-        let accepted = "Password accepted, access granted.  Welcome, my friend, to the real SynthoSphere!";
         function password() {
 
             
@@ -229,7 +245,7 @@
 
         
         function create() {
-            openInNewTab(link + "/g/go");
+            openInNewTab(link + "/g/go")
 
 
 
@@ -237,31 +253,31 @@
 
 
         function games() {
-            openInNewTab(link + "/g/go");
+            openInNewTab(link + "/g/go")
 
 
         }
 
         function hail() {
-            openInNewTab(link + "/hail.html");
+            openInNewTab(link + "/hail.html")
 
 
         }
         
 
         function monkey() {
-            openInNewTab(link + '/g/monkey.html');
+            openInNewTab(link + '/g/monkey.html')
 
 
 
         }
 
         function prxy() {
-            alert('Function has temporarily been removed.');
+            alert('Function has temporarily been removed.')
         }
 
         function denied() {
-            window.alert('Access Denied.  Please try again.');
+            window.alert('Access Denied.  Please try again.')
         }
 
         
@@ -303,50 +319,42 @@
     <br>
     
     </center>
+      <center>
 
-   <center>
+    <div class="holder">
+      
     <a href="calculator.html">
         <div class="container">
-            <img src="Media/mathclass.jpg" alt="Math" class="image" height="250" width="500" style="border-bottom: dashed; border-color: red;">
-                <div class="overlay">
-                    <div class="text">Math Tool</div>
-                </div>
+            <img src="Media/mathclass.jpg" alt="Math" class="image" >
+               
           </div>
         </a>
           
     <a href="ela.html">    
         <div class="container">
-            <img class="image" src="Media/ela.jpeg" height="250" width="500" style="border-bottom: dashed; border-color: red;">
-                <div class="overlay">
-                    <div class="text">ELA Tools</div>
-                </div>
+            <img class="image" src="Media/ela.jpeg">
+            
         </div>
     </a>
 
     <a href="notepad.html">
         <div class="container">
-            <img class="image" src="Media/notepad.png" height="250" width="500" style="border-bottom: dashed; border-color: red;" />
-                <div class="overlay">
-                    <div class="text">NotePad</div>
-                </div>
+            <img class="image" src="Media/notepad.png" />
+               
         </div>
     </a>
 
     <a href="news.html">
         <div class="container">
-            <img class="image" src="Media/crms.png" height="250" width="500" style="border-bottom: dashed; border-color: red;" />
-                <div class="overlay">
-                    <div class="text">SynthoSphere News</div>
-                </div>
+            <img class="image" src="Media/crms.png" />
+               
         </div>
     </a>
 
     <a href="map.html">
         <div class="container">
-            <img class="image" src="Media/map.png" height="250" width="500">
-                <div class="overlay">
-                    <div class="text">Map of Earth</div>
-                </div>
+            <img class="image" src="Media/map.png">
+
         </div>
     </a>
 
@@ -354,27 +362,25 @@
 
     <a href="population.html">
         <div class="container">
-            <img src="Media/World_population_SVG_map.svg" class="image" height="250" width="500">
-                <div class="overlay">
-                    <div class="text">World Population</div>
-                </div>
+            <img src="Media/World_population_SVG_map.svg" class="image">
+                
         </div>
     </a>
 
     <a href="doxxing">
         <div class="container">
-            <img class="image" src="Media/hacked.jpg" height="250" width="500">
-                <div class="overlay">
-                    <div class="text">Doxxing Tool</div>
-                </div>
+            <img class="image" src="Media/hacked.jpg" >
+                
         </div>
+
+    </div>
+        </center>
     </a>
     <br>
     <br>
 
     
     <script src="rick.js"></script>
-  </center>
     <br>
     <footer>
 
@@ -383,8 +389,9 @@
            </center>
 
            <br>
-        <p style="font-size: 8;">SynthoSphere, V3.1</p>
+        <p style="font-size: 8;">SynthoSphere, V3.5</p>
         <p style="font-size: 8;">(C) <a class="launch" onclick="password()"  href="javascript: password()">Doctor Lemon</a>, 2023</p>
+
 
       
         
