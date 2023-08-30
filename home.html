@@ -11,6 +11,7 @@
         body {
             background-image: linear-gradient(to left,blue, black, blue);
             color: white;
+            cursor: url('nuke1.png'), pointer;
         }
 
         a, .overlay, .container {
@@ -183,8 +184,26 @@
   visibility: visible;
 }
     </style>
+  
+  <style>
+.time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2.5em;
+}
+</style>
 </head>
 <body>
+<div class="time" id="time"></div>
+<script>
+var timeElement = document.getElementById("time");
+
+setInterval(function() {
+  timeElement.textContent = new Date().toLocaleTimeString();
+}, 1000);
+</script>
+
     <script src="cloak.js"></script>
     
     <div class="animation-area">
