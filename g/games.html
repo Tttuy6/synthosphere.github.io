@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="gstyle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    function randomMessage() {
+      // Create an array of 10 messages.
+      var messages = ["9+10=21", "SynthoSphere", "Unblocker coming soon!", "What game should be next?", "Be sure to check out the forms page!", "This is cool, yeah?", "Random text lol", "no u", "Welcome!", "Jeopardy music plays in the background while you pick a game.", "The ice cream machine is McBroken."];
+    
+      // Choose a random message from the array.
+      var randomIndex = Math.floor(Math.random() * messages.length);
+      var message = messages[randomIndex];
+    
+      // Set the text of the h3 element to the random message.
+      $("#message").text(message);
+    }
+    
+    $(document).ready(function() {
+      // Call the randomMessage() function when the page loads.
+      randomMessage();
+    });
+    </script>
 </head>
 <body>
   <script src="/cloak.js"></script>
@@ -35,7 +54,7 @@
           <br>
           <div class="big">
             <center>
-            <h1 class="title">Welcome to the real SynthoSphere!</h1>
+            <h1 class="title" id="message"></h1>
           </center>
 
           </div>
