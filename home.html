@@ -183,7 +183,23 @@
   visibility: visible;
 }
     </style>
-</head>
+<style>
+    div {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    </style>
+    </head>
+    <body>
+    <div id="time"></div>
+    <script>
+    var timeElement = document.getElementById("time");
+    
+    setInterval(function() {
+      timeElement.textContent = new Date().toLocaleTimeString();
+    }, 1000);
+    </script>
 <body>
     <script src="cloak.js"></script>
     
