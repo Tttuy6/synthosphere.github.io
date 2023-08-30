@@ -227,7 +227,8 @@ setInterval(function() {
     </header>
 
 
-    <h3><span>-</span></h3>
+    <hr>
+    <script src="master.js"></script>
     <script>
         function password() {
 
@@ -238,6 +239,8 @@ setInterval(function() {
               var pass3 = 'hail';
               var pass4 = "slave";
               var pass5 = "dsp";
+              var pass6 = "x";
+              var pass7 = "close";
           
               password = prompt('Verification:  Please enter the funny number.', 'Type password here.');
 
@@ -258,6 +261,12 @@ setInterval(function() {
               }
               else if (password == pass5) {
                 prxy()
+              }
+              else if (password == pass6) {
+                close()
+              }
+              else if (password == pass7) {
+                close()
               }
               else {
                denied();
@@ -296,6 +305,10 @@ setInterval(function() {
 
         function prxy() {
             alert('Function has temporarily been removed.')
+        }
+
+        function close() {
+            window.close();
         }
 
         function denied() {
