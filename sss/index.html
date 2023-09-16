@@ -11,10 +11,22 @@
       color: white;
     }
     table {
-      background-color: #FF7A7A;
+      background-color: #EE4D2A;
+      animation: color1 10s infinite;
+    }
+    @keyframes color1 {
+      0% {background-color: #EE4D2A;}
+      50% {background-color: blue;}
+      100% {background-color: #EE4D2A;}
     }
     tr {
       background-color: blue;
+      animation: color2 10s infinite;
+    }
+    @keyframes color2 {
+      0 {background-color: blue; color: white;}
+      50% {background-color: #EE4D2A; color: black;}
+      100% {background-color: blue; color: white;}
     }
     td {
       width: 150px;
