@@ -1,3 +1,6 @@
+// Alert to make people press something on the site.
+window.alert('Hi!  This sound effect machine requires you to click the page for it to work.');
+
 // Define sound effect URLs
 const soundEffects = {
   'a': 'sfx/vine-boom.mp3',
@@ -26,6 +29,11 @@ const soundEffects = {
   'b': 'sfx/error.mp3',
   'n': 'sfx/uwu.mp3',
   'm': 'sfx/uwu2.mp3',
+  '1': 'sfx/alarm.mp3',
+  '2': 'sfx/bigBrain.mp3',
+  '3': 'sfx/memeFinals.mp3',
+  '4': 'sfx/oof.mp3',
+  '5': 'sfx/widePutin.mp3',
 };
 
 // Handle key press event
