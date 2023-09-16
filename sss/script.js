@@ -35,8 +35,8 @@ const soundEffects = {
   '4': 'sfx/oof.mp3',
   '5': 'sfx/widePutin.mp3',
   '6': 'sfx/pufferFish.mp3',
-  '-': 'sfx/augh.mp3',
-  '=': 'sfx/aughAugh.mp3',
+  '7': 'sfx/augh.mp3',
+  '8': 'sfx/aughAugh.mp3',
 };
 
 // Handle key press event
