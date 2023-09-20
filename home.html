@@ -275,33 +275,39 @@ setInterval(function() {
             
 
         
-        function create() {
-            openInNewTab(link + "/g/go")
+// Define sound effect URL
+const choirSound = 'Media/choir.mp3';
 
+// ...
 
+function create() {
+  playSound(choirSound);
+  openInNewTab(link + "/g/go");
+}
 
-        }
+function games() {
+  playSound(choirSound);
+  openInNewTab(link + "/g/go");
+}
 
+function hail() {
+  playSound(choirSound);
+  openInNewTab(link + "/hail.html");
+}
 
-        function games() {
-            openInNewTab(link + "/g/go")
+function monkey() {
+  playSound(choirSound);
+  openInNewTab(link + '/g/monkey.html');
+}
 
+// ...
 
-        }
+// Function to play a sound
+function playSound(soundUrl) {
+  const audio = new Audio(soundUrl);
+  audio.play();
+}
 
-        function hail() {
-            openInNewTab(link + "/hail.html")
-
-
-        }
-        
-
-        function monkey() {
-            openInNewTab(link + '/g/monkey.html')
-
-
-
-        }
 
         function prxy() {
             alert('Function has temporarily been removed.')
