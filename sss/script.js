@@ -54,3 +54,9 @@ function playSound(soundUrl) {
   const audio = new Audio(soundUrl);
   audio.play();
 }
+
+
+function playFromClick(link) {
+  var sound = new Audio(link);
+  sound.play();
+}
