@@ -37,7 +37,12 @@ const soundEffects = {
   '6': 'sfx/pufferFish.mp3',
   '7': 'sfx/augh.mp3',
   '8': 'sfx/aughAugh.mp3',
-  'aUpper': 'sfx/bingChilling.mp3',
+  '9': 'sfx/goofy-yell.mp3',
+  '0': 'sfx/i-like-ya-cut-g.mp3',
+  'aUpper': 'sfx/i-will-send-you-to-jesus.mp3',
+  'sUpper': 'sfx/sad_song.mp3',
+  'dUpper': 'sfx/sike.mp3',
+  'fUpper': 'sfx/trololo.mp3',
 };
 
 // Handle key press event
