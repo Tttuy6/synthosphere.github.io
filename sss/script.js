@@ -43,6 +43,7 @@ const soundEffects = {
   'wUpper': 'sfx/sad_song.mp3',
   'eUpper': 'sfx/sike.mp3',
   'rUpper': 'sfx/trololo.mp3',
+  'tUpper': 'sfx/huh.mp3',
 };
 
 // Handle key press event
