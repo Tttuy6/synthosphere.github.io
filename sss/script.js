@@ -37,12 +37,19 @@ const soundEffects = {
   '6': 'sfx/pufferFish.mp3',
   '7': 'sfx/augh.mp3',
   '8': 'sfx/aughAugh.mp3',
+  'aUpper': 'sfx/bingChilling.mp3',
 };
 
 // Handle key press event
 document.addEventListener('keypress', function(event) {
-  const key = event.key.toLowerCase();
-  const sound = soundEffects[key];
+  const key = event.key;
+  let sound;
+
+  if (key === key.toLowerCase()) {
+    sound = soundEffects[key.toLowerCase()];
+  } else {
+    sound = soundEffects[key.toLowerCase() + 'Upper'];
+  }
 
   if (sound) {
     playSound(sound);
