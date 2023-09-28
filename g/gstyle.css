@@ -233,7 +233,7 @@ body {
           }  
 
           .par2 {
-              width: 100%;
+              width: 120px;
               height: 60px;
               transform: skew(-20deg);
               background: rgb(35, 16, 247);
