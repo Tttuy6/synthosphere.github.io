@@ -42,6 +42,18 @@
       font-weight: bold;
       color: #333;
     }
+
+    .button {
+      width: 150px;
+      height: 50px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      margin: 10px;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -374,6 +386,114 @@
   </table>
   <center>
     <h3>Want to see your name on the leader board? Fill out the first form <a target="_self" href="/forms.html">on this page</a>.</h3>
+    <hr>
+    <h4>Here is the SpeedRun timer!  Drag the button into your bookmarks bar, then click on the bookmark to activate it!</h4>
+    <a href="javascript:(function() {
+      var startTime;
+      var running = false;
+      var initialX;
+      var initialY;
+      var offsetX = 0;
+      var offsetY = 0;
+      var stopwatchContainer = null;
+    
+      function startStopwatch() {
+        startTime = new Date().getTime();
+        running = true;
+      }
+    
+      function stopStopwatch() {
+        running = false;
+      }
+    
+      function resetStopwatch() {
+        startTime = null;
+        running = false;
+      }
+    
+      function updateStopwatch() {
+        var display = document.getElementById('stopwatch-display');
+        if (running) {
+          var currentTime = new Date().getTime();
+          var elapsed = currentTime - startTime;
+          var minutes = Math.floor(elapsed / 60000);
+          var seconds = Math.floor((elapsed % 60000) / 1000);
+          var milliseconds = Math.floor((elapsed % 1000) / 10);
+          display.textContent = minutes + ':' + seconds + '.' + milliseconds;
+        } else {
+          display.textContent = '0:00.00';
+        }
+        requestAnimationFrame(updateStopwatch);
+      }
+    
+      function handleMouseDown(e) {
+        initialX = e.clientX - offsetX;
+        initialY = e.clientY - offsetY;
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+      }
+    
+      function handleMouseMove(e) {
+        offsetX = e.clientX - initialX;
+        offsetY = e.clientY - initialY;
+        stopwatchContainer.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      }
+    
+      function handleMouseUp() {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+      }
+    
+      stopwatchContainer = document.createElement('div');
+      stopwatchContainer.style.position = 'fixed';
+      stopwatchContainer.style.top = '10px';
+      stopwatchContainer.style.right = '10px';
+      stopwatchContainer.style.padding = '10px';
+      stopwatchContainer.style.backgroundColor = '#fff';
+      stopwatchContainer.style.border = '1px solid #000';
+      stopwatchContainer.style.fontFamily = 'Arial, sans-serif';
+      stopwatchContainer.style.userSelect = 'none';
+      stopwatchContainer.style.cursor = 'move';
+      stopwatchContainer.style.display = 'flex';
+      stopwatchContainer.style.flexDirection = 'column';
+      stopwatchContainer.style.alignItems = 'center';
+    
+      var display = document.createElement('span');
+      display.id = 'stopwatch-display';
+      display.textContent = '0:00.00';
+      display.style.fontSize = '20px';
+      display.style.marginBottom = '10px';
+    
+      var buttonContainer = document.createElement('div');
+      buttonContainer.style.display = 'flex';
+      buttonContainer.style.gap = '10px';
+    
+      var startButton = document.createElement('button');
+      startButton.textContent = 'Start';
+      startButton.addEventListener('click', startStopwatch);
+    
+      var stopButton = document.createElement('button');
+      stopButton.textContent = 'Stop';
+      stopButton.addEventListener('click', stopStopwatch);
+    
+      var resetButton = document.createElement('button');
+      resetButton.textContent = 'Reset';
+      resetButton.addEventListener('click', resetStopwatch);
+    
+      buttonContainer.appendChild(startButton);
+      buttonContainer.appendChild(stopButton);
+      buttonContainer.appendChild(resetButton);
+    
+      stopwatchContainer.appendChild(display);
+      stopwatchContainer.appendChild(buttonContainer);
+    
+      stopwatchContainer.addEventListener('mousedown', handleMouseDown);
+    
+      document.body.appendChild(stopwatchContainer);
+    
+      updateStopwatch();
+    })();
+    " class="button">SpeedRun Timer</a>
   </center>
 </body>
 </html>
