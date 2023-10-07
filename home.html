@@ -3,435 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome to SynthoSphere, providing you with all of your school needs!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=index.html" />
+    <meta name="description" content="SynthoSphere, providing you with all of the tools you will need to get an A!  We have everything from calculators to our own news website!  Come join our community!">
     <link rel="icon" type="image/x-icon" href="Media/logonew.gif">
-    <script src="cloak2.js"></script>
+    <script src="rick.js"></script>
     <title>SynthoSphere</title>
     <style>
-        body {
-            background-image: linear-gradient(to left,blue, black, blue);
-            color: white;
-            cursor: url('nuke1.png'), pointer;
-        }
-
-        a, .overlay, .container {
-            cursor: url('f.png'), pointer;
-        }
-
-
-
-        .logo {
-    animation: slideToLeft 4s;
-    animation-name: slideToLeft;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    }
-
-    .logo1 {
-        animation: spin 3s;
-        animation-name: spin;
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes slideToLeft {
-
-        0% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0.75;
-        }
-
-   
+body {
+  background-color: #1d2630;
 }
 
-        h2 {
-            animation: slideUp 1.5s;
-            animation-name: slideUp;
-            animation-fill-mode: forwards;
-            animation-delay: 2s;
-        }
-
-        @keyframes slideUp {
-          0% {
-            transform: translateY(0) translateX(0);
-          }
-          98% {
-            transform: translateY(-320%) translateX(0);
-          }
-          100% {
-            transform: translateY(-320%);
-          }
-        }
-
-        .container {
-          width: 30%;
-          margin-top: 10%;
-          min-width: 600px;
-        }
-
-
-
-        .holder {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          align-content: center;
-          text-align: center;
-          margin: 0;
-        }
-      
-        .image {
-          display: block;
-          height: 24vh;
-          width: 28vw;
-          min-height: 400px;
-          min-width: 600px;
-          border: dotted green;
-          transition: transform 3s;
-          margin-left: 5px;
-          margin-right: 5px;
+#load {
+  position:absolute;
+  width:600px;
+  height:36px;
+  left:50%;
+  top:40%;
+  margin-left:-300px;
+  overflow:visible;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  cursor:default;
 }
 
-      .image:hover {
-        transform: scale(1.2);
-        border: dashed red;
-      }
-
-.darkmode {
-    background-image: url(illusion.gif)
+#load div {
+  position:absolute;
+  width:20px;
+  height:36px;
+  opacity:0;
+  font-family:Helvetica, Arial, sans-serif;
+  animation:move 2s linear infinite;
+  -o-animation:move 2s linear infinite;
+  -moz-animation:move 2s linear infinite;
+  -webkit-animation:move 2s linear infinite;
+  transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  color:#35C4F0;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 100%;
-  right: 0;
-  background-color: rgb(0, 34, 107);
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
+#load div:nth-child(2) {
+  animation-delay:0.2s;
+  -o-animation-delay:0.2s;
+  -moz-animation-delay:0.2s;
+  -webkit-animation-delay:0.2s;
+}
+#load div:nth-child(3) {
+  animation-delay:0.4s;
+  -o-animation-delay:0.4s;
+  -webkit-animation-delay:0.4s;
+  -webkit-animation-delay:0.4s;
+}
+#load div:nth-child(4) {
+  animation-delay:0.6s;
+  -o-animation-delay:0.6s;
+  -moz-animation-delay:0.6s;
+  -webkit-animation-delay:0.6s;
+}
+#load div:nth-child(5) {
+  animation-delay:0.8s;
+  -o-animation-delay:0.8s;
+  -moz-animation-delay:0.8s;
+  -webkit-animation-delay:0.8s;
+}
+#load div:nth-child(6) {
+  animation-delay:1s;
+  -o-animation-delay:1s;
+  -moz-animation-delay:1s;
+  -webkit-animation-delay:1s;
+}
+#load div:nth-child(7) {
+  animation-delay:1.2s;
+  -o-animation-delay:1.2s;
+  -moz-animation-delay:1.2s;
+  -webkit-animation-delay:1.2s;
 }
 
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
+@keyframes move {
+  0% {
+    left:0;
+    opacity:0;
+  }
+	35% {
+		left: 41%; 
+		-moz-transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%; 
+		-moz-transform:rotate(0deg); 
+		-webkit-transform:rotate(0deg); 
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg); 
+		opacity:1;
+	}
+	100% {
+		left:100%; 
+		-moz-transform:rotate(-180deg); 
+		-webkit-transform:rotate(-180deg); 
+		-o-transform:rotate(-180deg); 
+		transform:rotate(-180deg);
+		opacity:0;
+	}
 }
 
-
-
-    .launch{
-        all: unset;
-    }
-
-    .launch:hover {
-        color: black;
-        background-color: white;
-        cursor: help;
-    }
-
-
-
-    h3 {
-            width: 100%; 
-            text-align: center; 
-            border-bottom: 1px solid #ffffff; 
-            line-height: 0.1em;
-            margin: 10px 0 20px; 
-        } 
-
-        h3 span {  
-            padding:0 10px; 
-        }
-
-        .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+@-moz-keyframes move {
+	0% {
+		left:0; 
+		opacity:0;
+	}
+	35% {
+		left:41%; 
+		-moz-transform:rotate(0deg); 
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%; 
+		-moz-transform:rotate(0deg); 
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	100% {
+		left:100%; 
+		-moz-transform:rotate(-180deg); 
+		transform:rotate(-180deg);
+		opacity:0;
+	}
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-  
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  opacity: 0;
-  transition: opacity 1s;
+@-webkit-keyframes move {
+	0% {
+		left:0; 
+		opacity:0;
+	}
+	35% {
+		left:41%; 
+		-webkit-transform:rotate(0deg); 
+		transform:rotate(0deg); 
+		opacity:1;
+	}
+	65% {
+		left:59%; 
+		-webkit-transform:rotate(0deg); 
+		transform:rotate(0deg); 
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		-webkit-transform:rotate(-180deg); 
+		transform:rotate(-180deg); 
+		opacity:0;
+	}
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+@-o-keyframes move {
+	0% {
+		left:0; 
+		opacity:0;
+	}
+	35% {
+		left:41%; 
+		-o-transform:rotate(0deg); 
+		transform:rotate(0deg); 
+		opacity:1;
+	}
+	65% {
+		left:59%; 
+		-o-transform:rotate(0deg); 
+		transform:rotate(0deg); 
+		opacity:1;
+	}
+	100% {
+		left:100%; 
+		-o-transform:rotate(-180deg); 
+		transform:rotate(-180deg); 
+		opacity:0;
+	}
 }
     </style>
-  
-  <style>
-.time {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 2.5em;
-}
-</style>
 </head>
 <body>
-<div class="time" id="time"></div>
-<script>
-var timeElement = document.getElementById("time");
+  <div id="count">0</div>
+  <script>
+    const elCount = document.querySelector('#count');
+    let rPressed = false;
+    let count = 0;
 
-setInterval(function() {
-  timeElement.textContent = new Date().toLocaleTimeString();
-}, 1000);
-</script>
+    document.body.addEventListener('keydown', keyDown);
+    document.body.addEventListener('keyup', keyUp);
 
-    <script src="cloak.js"></script>
-    
-    <div class="animation-area">
-
-            <div id="count">0</div>
-
-
-    <center>
-    <header>
-        <a href="index.html">
-            <img loading="lazy" class="logo logo1" src="Media/logonew.gif" height="100" width="100" style="margin-left: auto; margin-right: auto;">
-        </a>
-            <h2>SynthoSphere</h2>
-        
-            
-            <br>
-
-            <center>
-                <iframe src="ctdn.html" height="325px" width="550px" style="border: none; overflow: hidden;"></iframe>
-            </center>
-    </header>
-
-
-    <hr>
-    <script src="master.js"></script>
-    <script>
-        function password() {
-
-            
-              var password;
-              var pass1 = "69";
-              var pass2 = "420";
-              var pass3 = 'hail';
-              var pass4 = "slave";
-              var pass5 = "dsp";
-              var pass6 = "x";
-              var pass7 = "close";
-          
-              password = prompt('Verification:  Please enter the funny number.', 'Type password here.');
-
-
- 
-          
-              if (password == pass1) {
-                create(); // Call create() function if password is correct
-              }
-              else if (password == pass2) {
-                games();
-              }
-              else if (password == pass3) {
-                hail()
-              }
-              else if (password == pass4) {
-                monkey()
-              }
-              else if (password == pass5) {
-                prxy()
-              }
-              else if (password == pass6) {
-                close()
-              }
-              else if (password == pass7) {
-                close()
-              }
-              else {
-               denied();
-              }
-            }
-            
-
-        
-// Define sound effect URL
-const choirSound = 'Media/choir.mp3';
-
-// ...
-
-function create() {
-  playSound(choirSound);
-  openInNewTab(link + "/g/go");
-}
-
-function games() {
-  playSound(choirSound);
-  openInNewTab(link + "/g/go");
-}
-
-function hail() {
-  playSound(choirSound);
-  openInNewTab(link + "/hail.html");
-}
-
-function monkey() {
-  playSound(choirSound);
-  openInNewTab(link + '/g/monkey.html');
-}
-
-// ...
-
-// Function to play a sound
-function playSound(soundUrl) {
-  const audio = new Audio(soundUrl);
-  audio.play();
-}
-
-
-        function prxy() {
-            alert('Function has temporarily been removed.')
-        }
-
-        function close() {
-            window.close();
-        }
-
-        function denied() {
-            window.alert('Access Denied.  Please try again.')
-        }
-
-        
-
-
-
-      </script>
-
-        <br>        
-
-
-    
-
-
-        <br>
-        <br>
-        <br>
-
-<script>
-    function hack() {
-        window.open('https://synthosphere.github.io/hack.html','popup','width=600,height=300'); return false;
-        one()
+    function setCount(newCount) {
+      count = newCount;
+      elCount.textContent = newCount;
     }
 
-    function one() {
-        window.open('https://synthosphere.github.io/hack.html','popup','width=600,height=600'); return false;
-        two()
+    function keyDown(event) {
+      if (event.keyCode == 82) {
+        setCount(count + 1);
+
+        setTimeout(() => {
+          setCount(0);
+        }, 250);
+
+        if (count === 2) {
+          openTab();
+        }
+      }
     }
 
-    function two() {
-        window.open('https://synthosphere.github.io/hack.html','popup','width=600,height=600'); return false;
-    
+    function openTab() {
+      window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
     }
-</script>
-
-
-    <br>
-    <br>
-    <br>
-    
-    </center>
-      <center>
-
-    <div class="holder">
-      
-    <a href="calculator.html">
-        <div class="container">
-            <img loading="lazy" src="Media/mathclass.jpg" alt="Math" class="image" >
-               
-          </div>
-        </a>
-          
-    <a href="ela.html">    
-        <div class="container">
-            <img loading="lazy" class="image" src="Media/ela.jpeg">
-            
-        </div>
-    </a>
-
-    <a href="notepad.html">
-        <div class="container">
-            <img loading="lazy" class="image" src="Media/notepad.png" />
-               
-        </div>
-    </a>
-
-    <a href="news.html">
-        <div class="container">
-            <img loading="lazy" class="image" src="Media/crms.png" />
-               
-        </div>
-    </a>
-
-    <a href="map.html">
-        <div class="container">
-            <img loading="lazy" class="image" src="Media/map.png">
-
-        </div>
-    </a>
-
-    
-
-    <a href="population.html">
-        <div class="container">
-            <img loading="lazy" src="Media/worldPop.jpeg" class="image">
-                
-        </div>
-    </a>
-
-    </div>
-        </center>
-    </a>
-    <br>
-    <br>
-
-    
-    <script src="rick.js"></script>
-    <br>
-    <footer>
-
-        <center>
-            <div class="powr-hit-counter" id="5dc4f7b8_1683237299"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
-           </center>
-
-           <br>
-        <p style="font-size: 8;">SynthoSphere, V3.5</p>
-        <p style="font-size: 8;">(C) <a class="launch" onclick="password()"  href="javascript: password()">Doctor Lemon</a>, 2023</p>
-      <img loading="lazy" src="vineBoom.gif" class="moyai" height="50px" width="50px" alt="moyai">
-
-
-      
-        
-    </footer>
+  </script>
+<div id="load">
+  <div>G</div>
+  <div>N</div>
+  <div>I</div>
+  <div>D</div>
+  <div>A</div>
+  <div>O</div>
+  <div>L</div>
+</div>
 
 </body>
 </html>
