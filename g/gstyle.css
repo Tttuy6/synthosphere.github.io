@@ -133,7 +133,7 @@ body {
       margin-top: 20px;
       height: 180px;
       width: 120px;
-      animation: changeBgForNotWorking 10s infinite alternate ease;
+      animation: changeBgForNotWorking 5s infinite alternate ease;
      }
 
      @keyframes changeBgForNotWorking {
