@@ -9,8 +9,8 @@ function coverPage(url) {
     // Create a fullscreen iframe.
     const iframe = document.createElement('iframe');
     iframe.src = url;
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
+    iframe.style.width = '100vw';
+    iframe.style.height = '100vh';
   
     // Append the iframe to the document body.
     document.body.appendChild(iframe);
