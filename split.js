@@ -1,4 +1,8 @@
 function coverPage(url) {
+    // Set the margin and height of the documentElement element to 0 and 100vh, respectively.
+    document.documentElement.style.margin = '0';
+    document.documentElement.style.height = '100vh';
+  
     // Remove all of the contents of the current page.
     document.body.innerHTML = '';
   
@@ -11,6 +15,7 @@ function coverPage(url) {
     // Append the iframe to the document body.
     document.body.appendChild(iframe);
   }
+  
 
 function openInNewTab(url) {
 
