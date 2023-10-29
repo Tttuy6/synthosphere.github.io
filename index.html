@@ -338,6 +338,7 @@ function playSound(soundUrl) {
           frame.style.width = frame.style.height = '100%';
           frame.style.setProperty('z-index', '9999');
           frame.style.setProperty('background-color', '#FFFFFF');
+          frame.style.border = 'none';
           document.body.appendChild(frame);
 
           var btn = document.createElement('button');
