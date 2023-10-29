@@ -62,4 +62,4 @@ function openInNewTab(url) {
 
 }
 
-let link = 'https://synthosphere.github.io'
+let site = 'https://synthosphere.github.io'
