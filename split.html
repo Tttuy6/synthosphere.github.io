@@ -8,6 +8,8 @@
 body {
   font-family: Arial;
   color: white;
+  margin: 0;
+  height: 100vh;
 }
 
 .split {
@@ -54,7 +56,7 @@ body {
     </div>
     </div>
 </a>
-<a href="javascript: openInNewTab(site + '/g/go.html')">
+<a href="javascript: openInNewTab('https://synthosphere.github.io/g/go.html')">
     <div class="split right">
     <div class="centered">
         <h2>New Tab</h2>
@@ -62,6 +64,126 @@ body {
     </div>
     </div>
 </a>
+
+  <script>
+    function coverPage(url) {
+        // Set the margin and height of the documentElement element to 0 and 100vh, respectively.
+        document.documentElement.style.margin = '0';
+        document.documentElement.style.height = '100vh';
+
+        // Remove all of the contents of the current page.
+        document.body.innerHTML = '';
+
+        // Create a fullscreen iframe.
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+
+        // Append the iframe to the document body.
+        document.body.appendChild(iframe);
+      }
+
+
+    function openInNewTab(url) {
+
+        win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+
+        var icon = win.document.createElement('link')
+        icon.rel = "shortcut icon"
+        icon.href = link + "/Media/gcl.png"
+        icon.type = "image/png"
+        win.document.head.appendChild(icon)
+
+        /*
+        var arc = win.document.createElement('script')
+        arc.async = true
+        arc.src = "https://arc.io/widget.min.js#RqQiAHK7"
+        win.document.head.appendChild(arc)*/
+
+        var title = win.document.createElement('title')
+        title.innerText = "Classroom"
+        win.document.head.appendChild(title)
+
+        /*
+        var home = win.document.createElement('a')
+        home.style.display = "block"
+        home.style.position = "absolute"
+        home.style.fontFamily = "'Courier New', Courier, monospace";
+        home.style.color = "rgb(76, 160, 55)"
+        home.href="#"
+        home.onclick = 'return console.log("hi") && false'
+        home.innerText = "home"
+        win.document.body.appendChild(home);
+        */
+
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.id = 'content';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+
+    }
+
+    let site = 'https://synthosphere.github.io'
+  </script>
+  <script>
+    document.cookie = 'cross-site-cookie2=noneCookie; SameSite=None; Secure';
+    let link = "https://synthosphere.github.io"
+
+    function openInNewTab(url) {
+
+
+      win = window.open();
+      win.document.body.style.margin = '0';
+      win.document.body.style.height = '100vh';
+
+      var icon = win.document.createElement('link')
+      icon.rel = "shortcut icon"
+      icon.href = link + "/Media/gcl.png"
+      icon.type = "image/png"
+      win.document.head.appendChild(icon)
+
+      /*
+      var arc = win.document.createElement('script')
+      arc.async = true
+      arc.src = "https://arc.io/widget.min.js#RqQiAHK7"
+      win.document.head.appendChild(arc)*/
+
+      var title = win.document.createElement('title')
+      title.innerText = "Classroom"
+      win.document.head.appendChild(title)
+
+      /*
+      var home = win.document.createElement('a')
+      home.style.display = "block"
+      home.style.position = "absolute"
+      home.style.fontFamily = "'Courier New', Courier, monospace";
+      home.style.color = "rgb(76, 160, 55)"
+      home.href="#"
+      home.onclick = 'return console.log("hi") && false'
+      home.innerText = "home"
+      win.document.body.appendChild(home);
+      */
+
+      var iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.id = 'content';
+      iframe.src = url;
+      win.document.body.appendChild(iframe);
+
+    }
+
+  </script>
      
 </body>
 </html> 
