@@ -2,8 +2,14 @@ document.cookie = 'cross-site-cookie2=noneCookie; SameSite=None; Secure';
 let link = "https://synthosphere.github.io"
 
 function openInNewTab(url) {
-  
+  // Check if the `?noBlank` parameter is present.
+  if (url.match(/\?noBlank/)) {
+    // Set the `iframe.src` property to the same URL as the current page.
+    iframe.src = window.location.href;
+    return;
+  }
 
+  // Open the link in a new tab.
   win = window.open();
   win.document.body.style.margin = '0';
   win.document.body.style.height = '100vh';
@@ -13,7 +19,7 @@ function openInNewTab(url) {
   icon.href = link + "/Media/gcl.png"
   icon.type = "image/png"
   win.document.head.appendChild(icon)
-  
+
   /*
   var arc = win.document.createElement('script')
   arc.async = true
@@ -46,3 +52,5 @@ function openInNewTab(url) {
   win.document.body.appendChild(iframe);
 
 }
+
+
