@@ -1,31 +1,33 @@
 document.cookie = 'cross-site-cookie2=noneCookie; SameSite=None; Secure';
+let link = "https://synthosphere.github.io"
+
 function openInNewTab(url) {
-  
-  if(new URLSearchParams(location.search).get("noblank") != null)
-  {
-    window.location= url;
+  // Check if the `?noBlank` parameter is present.
+  if (url.match(/\?noBlank/)) {
+    // Set the `iframe.src` property to the same URL as the current page.
+    iframe.src = window.location.href;
     return;
   }
-  
 
+  // Open the link in a new tab.
   win = window.open();
   win.document.body.style.margin = '0';
   win.document.body.style.height = '100vh';
 
-  const icon = win.document.createElement('link')
+  var icon = win.document.createElement('link')
   icon.rel = "shortcut icon"
-  icon.href = `${window.location.origin}/icon.png`
+  icon.href = link + "/Media/gcl.png"
   icon.type = "image/png"
   win.document.head.appendChild(icon)
-  
+
   /*
   var arc = win.document.createElement('script')
   arc.async = true
   arc.src = "https://arc.io/widget.min.js#RqQiAHK7"
   win.document.head.appendChild(arc)*/
 
-const title = win.document.createElement('title')
-  title.innerText = "Calculator"
+  var title = win.document.createElement('title')
+  title.innerText = "Classroom"
   win.document.head.appendChild(title)
 
   /*
@@ -40,7 +42,7 @@ const title = win.document.createElement('title')
   win.document.body.appendChild(home);
   */
 
-  const iframe = win.document.createElement('iframe');
+  var iframe = win.document.createElement('iframe');
   iframe.style.border = 'none';
   iframe.style.width = '100%';
   iframe.style.height = '100%';
@@ -51,4 +53,3 @@ const title = win.document.createElement('title')
 
 }
 
-var link = 'synthosphere.gihtub.io';
