@@ -3,7 +3,7 @@ let link = "https://synthosphere.github.io"
 
 function openInNewTab(url) {
   // Check if the `?noBlank` parameter is present.
-  if (url.match(/?noBlank/)) {we
+  if (url.match(/?noBlank/)) {
     // Set the `iframe.src` property to the same URL as the current page.
     iframe.src = window.location.href;
     return;
