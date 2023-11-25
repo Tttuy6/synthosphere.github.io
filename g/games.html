@@ -73,6 +73,12 @@
         audio.play();
       }
     });
+
+        // Initialize audio playback when the tab becomes active
+        window.addEventListener('focus', function() {
+      audio.play();
+    });
+
   </script>
 
       
