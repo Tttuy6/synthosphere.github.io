@@ -56,14 +56,14 @@
     window.alert('Hi!  Just wanted to let you know, the games that are flashing blue are currently not working.  Enjoy the site!  (Press ENTER or click OK to close this alert.)')
   </script>
 
-  <img src="/Media/bgmusic.gif" alt="Image" id="audioButton" height="150px" width="150px" onclick="playBGMusic()">
+  <img src="/Media/bgmusic.gif" alt="Image" id="audioButton" height="150px" width="150px" onclick="playBGMusic2()">
   <audio id="audio" src="/g/bgMusic.mp3" loop></audio>
 
   <script>
-    function playBGMusic() {
-      var audio = document.getElementById('audioButton');
+
+    function playBGMusic2() {
+      var audio = document.getElementById('audio');
       audio.play();
-      window.alert("If the music doesn't play, open a game and close it.  The music will play then.");
     }
 
     document.addEventListener('visibilitychange', function() {
