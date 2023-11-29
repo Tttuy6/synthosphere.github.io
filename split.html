@@ -59,7 +59,7 @@ body {
 </style>
 </head>
 <body>
-<a href="javascript: coverPage(site + '/g/go.html')">
+<a href="javascript: splitScreen()">
     <div class="split left">
     <div class="centered">
         <h2>Cover Tab</h2>
@@ -77,25 +77,32 @@ body {
 </a>
 
   <script>
-    function coverPage(url) {
-        // Set the margin and height of the documentElement element to 0 and 100vh, respectively.
-        document.body.style.margin = '0';
-        document.body.style.height = '100vh';
+     function splitScreen() {
+          var frame = document.createElement('iframe');
+          frame.src = 'https://synthosphere.github.io/split.html';
+          frame.style.position = 'fixed';
+          frame.style.left = frame.style.right = frame.style.top = frame.style.bottom = frame.style.margin = frame.style.border = '0';
+          frame.style.width = frame.style.height = '100%';
+          frame.style.setProperty('z-index', '9999');
+          frame.style.setProperty('background-color', '#FFFFFF');
+          frame.style.border = 'none';
+          document.body.appendChild(frame);
 
-        // Remove all of the contents of the current page.
-        document.body.innerHTML = '';
-
-        // Create a fullscreen iframe.
-        const iframe = document.createElement('iframe');
-        iframe.src = url;
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.border = 'none';
-        iframe.style.margin = '0';
-
-        // Append the iframe to the document body.
-        document.body.appendChild(iframe);
-      }
+          var btn = document.createElement('button');
+          btn.addEventListener('click', function() {
+            frame.style.display = frame.style.display === 'none' ? 'block' : 'none';
+          });
+          btn.style.position = 'fixed';
+          btn.style.bottom = '0';
+          btn.style.right = '0';
+          btn.style.margin = '20px';
+          btn.style.zIndex = '99999';
+          btn.style.border = 'none';
+          btn.style.fontSize = '14px';
+          btn.style.padding = '3px';
+          btn.innerHTML = 'Toggle';
+          document.body.appendChild(btn);
+        }
 
 
       function openInNewTab(url) {  // Check if the `?noBlank` parameter is present.
