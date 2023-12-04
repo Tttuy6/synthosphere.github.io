@@ -240,6 +240,7 @@ var pass4 = "slave";
 var pass5 = "dsp";
 var pass6 = "x";
 var pass7 = "close";
+var pass8 = "donald";
 
 password = prompt('Verification:  Please enter the funny number.', 'Type password here.');
 
@@ -266,6 +267,9 @@ else if (password == pass6) {
 }
 else if (password == pass7) {
   close()
+}
+else if (password == pass8) {
+  donald()
 }
 else {
  denied();
@@ -315,6 +319,10 @@ alert('Function has temporarily been removed.')
 
 function close() {
 window.close();
+}
+
+function donald() {
+  openInNewTab(link + "/ruffle/donald.html");
 }
 
 function denied() {
